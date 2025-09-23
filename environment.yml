@@ -1,0 +1,25 @@
+name: scalp-EEG
+
+channels:
+  - conda-forge
+  - anaconda
+  - defaults
+
+dependencies:
+  # Conda packages
+  - python=3.10
+  - numpy
+  - pandas
+  - matplotlib
+  - scikit-learn
+  - mambaforge
+  - ipython
+  - tqdm
+  - pyyaml
+  - scipy
+  - seaborn
+  - mne
+
+  # Pip packages from requirements.txt
+  - pip:
+    - -r requirements.txt
