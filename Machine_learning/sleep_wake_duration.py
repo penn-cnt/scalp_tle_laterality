@@ -79,10 +79,13 @@ def fastDeLong(predictions_sorted_transposed, label_1_count):
     return aucs, delongcov
 
 def calc_pvalue(aucs, sigma):
-    """Computes log(10) of p-values."""
+    """Computes p-value for hypothesis that two ROC AUCs are different."""
     l = np.array([[1, -1]])
+    # Z = |AUC1 - AUC2| / SE_diff
     z = np.abs(np.diff(aucs)) / np.sqrt(np.dot(np.dot(l, sigma), l.T))
-    return np.log10(2) + scipy.stats.norm.logsf(z, loc=0, scale=1) / np.log(10)
+    p_value = 2.0 * scipy.stats.norm.sf(z, loc=0, scale=1)[0][0] 
+    
+    return p_value
 
 def compute_ground_truth_statistics(ground_truth):
     assert np.array_equal(np.unique(ground_truth), [0, 1])
@@ -103,10 +106,21 @@ df_train = os.path.join(script_dir, "sleep_wake_training_261_laterality.csv")
 df_test = os.path.join(script_dir, "sleep_wake_test_104_laterality.csv")
 df_train = pd.read_csv(df_train)
 df_test = pd.read_csv(df_test)
+SPIKE_RATE_THRESHOLD = 0.017
 
-# Filter dataframes by threshold 0.43
+# Filter dataframes by threshold 0.43 and filter data who had more than a spike per hour in wake and sleep
 df_train_filtered = df_train[df_train['threshold'] == 0.43].copy()
 df_test_filtered = df_test[df_test['threshold'] == 0.43].copy()
+
+df_train_filtered = df_train_filtered[
+    (df_train_filtered['spike_rate_wake_min'] >= SPIKE_RATE_THRESHOLD) &
+    (df_train_filtered['spike_rate_sleep_min'] >= SPIKE_RATE_THRESHOLD)
+].copy()
+
+df_test_filtered = df_test_filtered[
+    (df_test_filtered['spike_rate_wake_min'] >= SPIKE_RATE_THRESHOLD) &
+    (df_test_filtered['spike_rate_sleep_min'] >= SPIKE_RATE_THRESHOLD)
+].copy()
 
 # --- 5. DATA PREPARATION FOR DeLONG'S TEST ---
 # Create a single, consistent test set for all comparisons
