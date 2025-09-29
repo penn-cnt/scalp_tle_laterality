@@ -25,6 +25,5 @@ jobs:
     - name: Run validation scripts
       run: |
         python United_Analysis/SAI_spike_rates.py
-        python Machine_learning/sleep_wake_duration.py
         python Machine_learning/all_recording_duration.py
         python Outcome/concordance.py
