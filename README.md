@@ -13,3 +13,16 @@ Explaining codebase:
 * tools folder contains some of the basic functions that are used in the analysis.
 
 Web-based calculator is: https://penn-cnt.github.io/scalp_lateralization/
+
+To set up your environment, first create a conda environment with Python 3.10 and pip:
+
+```bash
+conda create -n tle_env python=3.10 pip
+conda activate tle_env
+```
+
+Then, install the necessary dependencies using pip:
+
+```bash
+pip install -r requirements.txt
+```
