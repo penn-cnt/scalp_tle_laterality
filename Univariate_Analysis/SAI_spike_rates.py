@@ -6,10 +6,10 @@ import seaborn as sns
 
 # 1. Load data
 script_dir = os.path.dirname(os.path.abspath(__file__))
-tle_df_training = os.path.join(script_dir, "/Dataset/training_261.csv")
-tle_df_training = pd.read_csv(tle_df_training)
-save_path_2C = os.path.join(script_dir, "Visualization", "Fig2C.jpg")
-save_path_2D = os.path.join(script_dir, "Visualization", "Fig2D.jpg")
+tle_df_training = os.path.join(script_dir, "..", "Dataset", "training_261.csv")
+tle_df_training = pd.read_csv(tle_df_training)  #read in the training data
+save_path_2C = os.path.join(script_dir, "..", "Visualization", "Fig2C.jpg")
+save_path_2D = os.path.join(script_dir, "..", "Visualization", "Fig2D.jpg")
 
 # Filter for the specified threshold
 tle_df_training = tle_df_training[

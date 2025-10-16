@@ -14,11 +14,11 @@ from scipy.stats import ttest_ind, mannwhitneyu
 # 1. Load Data
 # ------------------------------------------------------------
 script_dir = os.path.dirname(os.path.abspath(__file__))
-df_train = os.path.join(script_dir, "/Dataset/training_261.csv")
-df_test = os.path.join(script_dir, "/Dataset/test_104.csv")
-cnt_surgical = os.path.join(script_dir, "/Dataset/outcome.csv")
-save_path_4B = os.path.join(script_dir, "Visualization", "Fig4B.jpg")
-save_path_4D = os.path.join(script_dir, "Visualization", "Fig4D.jpg")
+df_train = os.path.join(script_dir, "..", "Dataset", "training_261.csv")
+df_test = os.path.join(script_dir, "..", "Dataset", "test_104.csv")
+cnt_surgical = os.path.join(script_dir, "..", "Dataset", "outcome.csv")
+save_path_4B = os.path.join(script_dir, "..", "Visualization", "Fig4B.jpg")
+save_path_4D = os.path.join(script_dir, "..", "Visualization", "Fig4D.jpg")
 
 df_train = pd.read_csv(df_train)
 df_test = pd.read_csv(df_test)

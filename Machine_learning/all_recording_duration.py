@@ -10,11 +10,11 @@ durations_min = list(range(30, 1801, 30))
 
 # === File Paths ===
 script_dir = os.path.dirname(os.path.abspath(__file__))
-train_folder = os.path.join(script_dir, "/Dataset/patient_sai_values_all_training.csv")
-test_folder = os.path.join(script_dir, "/Dataset/patient_sai_values_all_test.csv")
-output_dir = os.path.join(script_dir, "/Visualization/")
-train_folder = pd.read_csv(train_folder)
-test_folder = pd.read_csv(test_folder)
+train_folder = os.path.join(script_dir, "..", "Dataset","patient_sai_values_all_training.csv")
+test_folder = os.path.join(script_dir, "..", "Dataset","patient_sai_values_all_test.csv")
+output_dir = os.path.join(script_dir, "..", "Visualization")
+# train_folder = pd.read_csv(train_folder)
+# test_folder = pd.read_csv(test_folder)
 
 def bootstrap_auc(y_true, y_score, n_iterations=1000, alpha=0.05):
     """Calculates bootstrap 95% CI for AUC and returns the median AUC."""
