@@ -1,39 +1,50 @@
-patient_id,admission_id,single_diagnosis,single_lat,single_loc,Record ID,HUP Number,Surgery,engel_stage_cnt,ilae_stage_cnt
-142,EMU1054,epilepsy,left,temporal,445.0,,Laser Ablation,I,"Seizure free since surgery, no auras"
-254,EMU1201,epilepsy,left,temporal,508.0,184.0,Laser Ablation,I,"Auras only, no other seizures"
-285,EMU1135,epilepsy,left,temporal,520.0,189.0,Resection,IV,No change (between 50% seizure reduction and 100% increase)
-415,EMU1519,epilepsy,left,temporal,589.0,207.0,Laser Ablation,I,"Seizure free since surgery, no auras"
-417,EMU1420,both,right,temporal,598.0,,Resection,I,"Seizure free since surgery, no auras"
-424,EMU1493,epilepsy,right,temporal,356.0,178.0,Resection,II,Seizure reduction >50% (but >3 seizure days/year)
-518,EMU1647,epilepsy,left,temporal,596.0,204.0,Laser Ablation,II,Rare seizures (1-3 seizure days per year)
-563,EMU1490,epilepsy,right,temporal,667.0,,Resection,IV,No change (between 50% seizure reduction and 100% increase)
-566,EMU1508,epilepsy,right,temporal,679.0,217.0,Laser Ablation,I,"Seizure free since surgery, no auras"
-581,EMU1807,epilepsy,right,temporal,621.0,221.0,Laser Ablation,I,"Seizure free since surgery, no auras"
-655,EMU1765,epilepsy,left,temporal,259.0,133.0,Resection,I,"Auras only, no other seizures"
-674,EMU1705,epilepsy,left,temporal,412.0,162.0,Laser Ablation,I,"Auras only, no other seizures"
-721,EMU1943,epilepsy,left,temporal,681.0,,Laser Ablation,III,Rare seizures (1-3 seizure days per year)
-730,EMU1856,epilepsy,right,temporal,680.0,,Laser Ablation,IV,No change (between 50% seizure reduction and 100% increase)
-752,EMU1849,epilepsy,left,temporal,689.0,,Laser Ablation,I,"Auras only, no other seizures"
-771,EMU1934,epilepsy,left,temporal,789.0,,Laser Ablation,I,"Auras only, no other seizures"
-778,EMU1888,epilepsy,left,temporal,785.0,223.0,Laser Ablation,I,"Auras only, no other seizures"
-816,EMU2078,both,left,temporal,230.0,166.0,Resection,IV,Seizure reduction >50% (but >3 seizure days/year)
-818,EMU2033,epilepsy,left,temporal,861.0,238.0,Laser Ablation,II,Seizure reduction >50% (but >3 seizure days/year)
-852,EMU2034,epilepsy,right,temporal,799.0,,Resection,II,Rare seizures (1-3 seizure days per year)
-892,EMU1963,epilepsy,left,temporal,829.0,,Laser Ablation,I,"Seizure free since surgery, no auras"
-896,EMU2058,epilepsy,right,temporal,,,Resection,IV,No change (between 50% seizure reduction and 100% increase)
-930,EMU2296,epilepsy,bilateral,temporal,852.0,233.0,Laser Ablation,I,"Seizure free since surgery, no auras"
-944,EMU2080,both,right,temporal,860.0,242.0,Resection,II,Rare seizures (1-3 seizure days per year)
-953,EMU2273,epilepsy,left,temporal,,,Laser Ablation,I,"Seizure free since surgery, no auras"
-954,EMU2097,epilepsy,right,temporal,,,Resection,III,Seizure reduction >50% (but >3 seizure days/year)
-972,EMU2342,epilepsy,left,temporal,858.0,,Resection,I,"Seizure free since surgery, no auras"
-985,EMU2352,epilepsy,left,temporal,877.0,240.0,Laser Ablation,II,Rare seizures (1-3 seizure days per year)
-1001,EMU2271,epilepsy,left,temporal,,,Laser Ablation,IV,No change (between 50% seizure reduction and 100% increase)
-1009,EMU2091,epilepsy,left,temporal,893.0,246.0,Resection,I,"Seizure free since surgery, no auras"
-1015,EMU2274,epilepsy,left,temporal,895.0,,Resection,I,"Seizure free since surgery, no auras"
-1146,EMU2499,epilepsy,left,temporal,648.0,208.0,Laser Ablation,IV,Seizure reduction >50% (but >3 seizure days/year)
-1150,EMU2526,epilepsy,right,temporal,993.0,261.0,Resection,I,"Seizure free since surgery, no auras"
-1191,EMU2694,epilepsy,left,temporal,1011.0,,Resection,I,"Seizure free since surgery, no auras"
-1194,EMU2544,epilepsy,right,temporal,990.0,,Resection,II,Rare seizures (1-3 seizure days per year)
-1240,EMU2527,epilepsy,left,temporal,828.0,,Laser Ablation,I,"Auras only, no other seizures"
-1258,EMU2506,epilepsy,left,temporal,1033.0,272.0,Resection,III,Seizure reduction >50% (but >3 seizure days/year)
-1347,EMU2574,epilepsy,left,temporal,295.0,142.0,Laser Ablation,III,Seizure reduction >50% (but >3 seizure days/year)
+patient_id,admission_id,single_diagnosis,single_lat,single_loc,Surgery,engel_stage,ilae_stage
+142,EMU1054,epilepsy,left,temporal,Laser Ablation,IA,1a
+182,EMU1320,epilepsy,right,temporal,Resection,IA,1
+254,"EMU1201,EMU2210",epilepsy,left,temporal,Laser Ablation,IB,2
+275,"EMU1991,EMU1137,EMU1136",both,right,temporal,Resection,IB,2
+285,EMU1135,epilepsy,left,temporal,Resection,IVB,5
+415,"EMU1519,EMU1520",epilepsy,left,temporal,Laser Ablation,IC,1
+417,EMU1420,both,right,temporal,Resection,IA,1a
+424,EMU1493,epilepsy,right,temporal,Resection,IIB,3
+518,EMU1647,epilepsy,left,temporal,Laser Ablation,IIB,3
+563,EMU1490,epilepsy,right,temporal,Resection,IIC,1
+566,"EMU1881,EMU1508",epilepsy,right,temporal,Laser Ablation,IA,1a
+581,EMU1807,epilepsy,right,temporal,Laser Ablation,IA,1a
+597,"EMU2344,EMU1821",epilepsy,left,temporal,Laser Ablation,IVB,5
+655,EMU1765,epilepsy,left,temporal,Resection,IC,2
+660,EMU1826,epilepsy,left,temporal,Laser Ablation,IA,1a
+670,EMU1710,both,right,temporal,Laser Ablation,IA,1a
+674,EMU1705,epilepsy,left,temporal,Laser Ablation,IB,2
+720,EMU1902,epilepsy,right,temporal,Resection,IA,1
+721,EMU1943,epilepsy,left,temporal,Laser Ablation,IVB,5
+730,EMU1856,epilepsy,right,temporal,Laser Ablation,IVB,5
+752,EMU1849,epilepsy,left,temporal,Laser Ablation,IA,1a
+763,EMU1843,epilepsy,right,temporal,Laser Ablation,IB,1
+771,EMU1934,epilepsy,left,temporal,Laser Ablation,IB,2
+778,EMU1888,epilepsy,left,temporal,Laser Ablation,IB,2
+816,EMU2078,both,left,temporal,Resection,IVA,4
+818,EMU2033,epilepsy,left,temporal,Laser Ablation,IIA,4
+837,EMU1977,epilepsy,right,temporal,Laser Ablation,IC,3
+852,EMU2034,epilepsy,right,temporal,Resection,ID,1
+866,EMU1973,epilepsy,right,temporal,Resection,IB,2
+892,EMU1963,epilepsy,left,temporal,Laser Ablation,IA,1a
+896,EMU2058,epilepsy,right,temporal,Resection,IVB,5
+944,EMU2080,both,right,temporal,Resection,IIB,3
+950,"EMU2088,EMU2087",epilepsy,left,temporal,Laser Ablation,IVC,6
+953,EMU2273,epilepsy,left,temporal,Laser Ablation,IA,1a
+972,EMU2342,epilepsy,left,temporal,Resection,IA,1a
+1001,EMU2271,epilepsy,left,temporal,Laser Ablation,IVC,5
+1009,EMU2091,epilepsy,left,temporal,Resection,IA,1a
+1030,EMU2160,epilepsy,left,temporal,Laser Ablation,IIIA,4
+1124,"EMU2405,EMU2404",epilepsy,right,temporal,Laser Ablation,IB,2
+1146,EMU2499,epilepsy,left,temporal,Laser Ablation,IVA,4
+1150,EMU2526,epilepsy,right,temporal,Resection,IA,1a
+1194,EMU2544,epilepsy,right,temporal,Resection,IIA,3
+1240,EMU2527,epilepsy,left,temporal,Laser Ablation,IB,2
+1258,"EMU2506,EMU2507",epilepsy,left,temporal,Resection,IIIA,4
+1271,EMU2365,epilepsy,left,temporal,Laser Ablation,IVC,6
+1333,EMU2466,epilepsy,right,temporal,Resection,IIB,3
+1347,EMU2574,epilepsy,left,temporal,Laser Ablation,IIIA,4
+1352,EMU2758,epilepsy,left,temporal,Laser Ablation,IIA,3
+1519,EMU3038,epilepsy,left,temporal,Laser Ablation,IB,2
