@@ -6,9 +6,18 @@ To run the analysis, follow these steps:
 
 Explaining codebase:
 * Dataset folder contains intermediate datasets and features that can be used to replicate study. It has spikes in left and right hemisphere (from our LOHO method) in all, wake, and sleep states (from sleep staging algorithm YASA) separately.
+  * `training_261.csv`: model development cohort (261 patients).
+  * `test_104_no_seizures.csv`: test cohort (104 patients). Spike rates and SAI are computed after removing EEG from 30 min before seizure onset to 30 min after seizure offset.
 * Univariate_Analysis folder contains spike rates and SAI analysis in model development cohorts. Code here replicates figure 2B and 2C (complete run in <1 min).
 * Machine_Learning folder contains python script for creating our logistic regression model and post-hoc analysis. Code here replicates figure 3C and 3D.
 * Outcome folder contains the surgical outcome analysis (Fig 4B and 4D).
+  * `concordance.py`: trains left vs. rest and right vs. rest SAI models (threshold 0.43) on `training_261.csv`, computes the probability that the model agrees with the side of surgery for operated patients in both cohorts, and compares it between good and poor outcome (Mann-Whitney U, two-sided). Outcome is the latest available follow-up (36, 24, 12 or 6 months); Engel I vs. II+ (Fig 4B, p = 0.037) and ILAE 1-2 vs. 3+ (Fig 4D, p = 0.084).
+  * The surgical outcome tables used by `concordance.py` contain clinical data and are not included in this repository. Set `CLINICAL_DIR` to the folder that holds `deid_with_redcap_Dec1025.csv` and `juri_surgery_outcomes_extracted_DEID.csv` before running it:
+
+    ```bash
+    CLINICAL_DIR=/path/to/outcome_files python Outcome/concordance.py
+    ```
+  * `concordance_github.py`: earlier version of the analysis that uses `Dataset/outcome.csv`.
 * Visualization folder stores all outputs of the analysis.
 * tools folder contains some of the basic functions that are used in the analysis.
 
